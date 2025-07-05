@@ -1,0 +1,117 @@
+.pageContainer {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.expenses {
+  padding: 20px;
+  background-color: #f8f9fa;
+  font-family: 'Arial', sans-serif;
+  margin-left: 250px;
+  margin-top: 50px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.summaryCards {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Responsive fallback */
+}
+
+.card {
+  flex: 1;
+  min-width: 200px; /* Prevent cards from shrinking too much */
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+select{
+  padding: 8px 12px;
+  border-radius: 13px;
+  border: 1px solid #ddd;
+  margin-bottom: 8px;
+}
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.card h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.card p {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 5px 0;
+  color: #222;
+}
+
+.card span {
+  color: #666;
+  font-size: 14px;
+}
+
+.chartContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.chartRow {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Responsive fallback */
+}
+
+.chartCard {
+  flex: 1;
+  min-width: 300px;/*  Prevent charts from breaking on small screens */
+  background: white;
+  padding: 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.loading {
+  text-align: center;
+  padding: 50px;
+  font-size: 18px;
+  color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .expenses{padding: 0.5rem;
+    margin-left: 0px;
+  }
+  .summaryCards {
+    flex-direction: column;
+  }
+  
+  .chartRow {
+    flex-direction: column;
+  }
+  
+  .chartCard {
+    width: 100%;
+    
+  }
+}
+.chartCard{
+  overflow: hidden;
+}
+
+
